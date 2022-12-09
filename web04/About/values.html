@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOTTE</title>
+    
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<style>
+.table { min-width:960px; }
+#logo2 { display:block; width:85px; height:auto; background-color:white; background-image:url("/pro04/resources/icon/lotte.jpg");
+background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
+#nav { border-bottom:3px solid #fff; }
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+  </head>
+
+  <body>
+  
+
+ 
+    <div id="nav-group">
+        <div class="container"> 
+            <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
+              <div class="navbar-brand">
+                <a class="navbar-item" id="logo2" href="/pro04/">
+                </a>
+            
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+            
+              <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start" id="gnb">
+                    <!-- ajax로 메뉴 로딩하여 추가하기 -->
+                    
+    
+                       <div href="/pro03/GetAboutCateListCtrl.html?cate=A" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              About LOTTE
+                        </a>
+                        <div class="navbar-dropdown single">
+                             <a class="navbar-item" href="/pro04/GetVisionListCtrl.html">
+                                   비전
+                             </a>
+                           <a class="navbar-item" href="/pro04/GetValuesListCtrl.html">
+                            핵심가치
+                          </a>
+                          <a class="navbar-item" href="/pro04/GetCEOListCtrl.html">
+                            CEO
+                          </a>
+                        </div> 
+                    </div>
+                     
+                        
+                    
+                    <div href="/pro03/GetEsgCateListCtrl.html?cate=B" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              ESG
+                        </a>
+                        <div class="navbar-dropdown single">
+                             <a class="navbar-item" href="/pro04/GetLotteesgListCtrl.html">
+                                   롯데 ESG
+                             </a>
+                           <a class="navbar-item" href="/pro04/GetEsggradeListCtrl.html">
+                            ESG 평가
+                          </a>
+                          <a class="navbar-item" href="/pro04/GetEsgnewsListCtrl.html">
+                            ESG 뉴스
+                          </a>
+                        </div> 
+                    </div>
+                   
+                    
+                    <div href="/pro03/GetIrCateListCtrl.html?cate=C" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              IR
+                        </a>
+                        <div class="navbar-dropdown single">
+                             <a class="navbar-item" href="/pro04/GetJibaeListCtrl.html">
+                                   지배구조
+                             </a>
+                           <a class="navbar-item" href="/pro04/GetJoojooListCtrl.html">
+                                주주정책
+                          </a>
+                          <a class="navbar-item" href="/pro04/GetJaemooListCtrl.html">
+                            재무정보
+                      </a>
+                        </div> 
+                    </div>
+
+                    
+                    <div href="/pro03/GetCareersCateListCtrl.html?cate=D" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              Careers
+                        </a>
+                        <div class="navbar-dropdown single">
+                             <a class="navbar-item" href="/pro04/GetInjaeListCtrl.html">
+                                   인재상
+                             </a>
+                           <a class="navbar-item" href="/pro04/GetChaeyongListCtrl.html">
+                           채용전형
+                          </a>
+                          <a class="navbar-item" href="/pro04/GetInsaListCtrl.html">
+                           인사제도
+                          </a>
+                        </div> 
+                    </div>
+                        <div class="navbar-dropdown cate" id="cate04"></div>
+                    
+                    <div href="/pro03/GetCsCateListCtrl.html?cate=E" class="navbar-item has-dropdown is-hoverable single">
+                        <a class="navbar-link is-arrowless">
+                              CS CENTER
+                        </a>
+                        <div class="navbar-dropdown single">
+                           <a class="navbar-item" href="/pro04/GetAskListCtrl.html">
+                            문의하기
+                          </a>
+                          <a class="navbar-item" href="/pro04/GetWayListCtrl.html">
+                            오시는 길
+                          </a>
+                        </div> 
+                    </div>
+                    <div class="navbar-dropdown cate" id="cate05"></div>
+                        
+                </div>
+                
+                <div class="navbar-end" id="tnb">
+                  <div class="navbar-item">
+                      
+                
+                 <div class="buttons">
+                   <a href="/pro04/UserInfoCtrl.html" class="button is-success">
+                     회원정보
+                   </a>
+                   <a href="/pro04/UserLogoutCtrl.html" class="button is-success">
+                     로그아웃
+                   </a>
+                    
+                       <a href="/pro04/AdminCtrl.html" class="button is-success">
+                         관리자
+                       </a>
+                     
+                 </div>
+                
+              </div>
+            </div>
+              </div>
+            </nav>
+        <script>
+        $(document).ready(function(){
+            $.ajax({
+                url:"/pro04/MenuLoadCtrl.html",
+                type:"POST",
+                enctype:"UTF-8",
+                datatype:"json",
+                processData:false,
+                contentType:false, 
+                cache:false,
+                success:function(data){
+                    $(".navbar-dropdown.cate").empty();
+                    var trans = $.parseJSON(data);
+                    $.each(trans, function(key, value){
+                        if(key=="data"){
+                            for(var i=0;i<value.length;i++){
+                                if(value[i].cate=="A"){
+                                    $("#cate01").append("<a href='/pro04/GetEsgDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="B"){
+                                    $("#cate02").append("<a href='/pro04/GetEsgDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="C"){
+                                    $("#cate03").append("<a href='/pro04/GetEsgDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="D"){
+                                    $("#cate04").append("<a href='/pro04/GetEsgDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="E"){
+                                    $("#cate05").append("<a href='/pro04/GetEsgDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="F"){
+                                    $("#cate06").append("<a href='/pro04/GetEsgDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                } else if(value[i].cate=="G"){
+                                    $("#cate07").append("<a href='/pro04/GetEsgDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                }
+                            }
+                        }
+                    });
+                    
+                }
+            });
+        });
+        </script>
+        </div>
+    </div>
+        <nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #fff; padding-bottom:8px; min-height:48px; line-height:48px;">
+          <ul style="float:right;">
+            <li><a href="/pro04/">Home</a></li>
+            <li class="is-active"><a href="#" aria-current="page">핵심가치</a></li>
+          </ul>
+        </nav>
+      <section class="section">
+        <div class="container">
+
+            <table class="table">
+              <thead>
+                <tr>
+                </tr>
+              </thead>
+               <tbody>
+               
+                <h2>핵심가치</h2><br><br>
+                <img src="./img/about/values/value_img.png" width="550" alt=""></a>
+                <p>롯데 핵심가치는 롯데인들이 미션과 비전을 달성하기 위해
+                    갖추어야 할 사고와 행동방식의 기준입니다.</p>
+
+                    <h2>정의 및 행동지침</h2>
+                    <strong>Beyond Customer Expectation</strong>
+                    [정의] 우리는 고객의 요구를 충족하는데 머무르지 않고, 고객의 기대를 뛰어넘는 가치를 창출해낸다.
+
+
+                    <strong>Challenge</strong>
+                    [정의]우리는 업무의 본질에 집중하며 끊임없는 도전을 통해 더 높은 수준의 목표를 달성해 나간다.
+
+                <strong>출발</strong>
+                    업무의 본질을 파악하고 조직 전체의
+                    성과와 연계되는 목표를 설정한다.
+
+                <strong>발전</strong>
+                    목표 달성을 위해 자발적으로
+                    업무 개선을 끊임없이 시도한다.
+
+                <strong>성과</strong>
+                    보다 높은 수준의 목표를 설정하고,
+                    포기하지 않고 달성해낸다.
+
+
+                    <strong>Respect</strong>
+                    [정의]우리는 다양한 의견을 존중하며 소통하고, 원칙을 준수함으로써 신뢰에 기반한 공동체를 지향한다.
+
+                <strong>출발</strong>
+                    구성원과 이해관계자들의 다양한 의견을
+                    존중하며 적극적으로 소통한다.
+
+                <strong>발전</strong>
+                    원칙을 준수하고 이해관계자들의 요구에
+                    적극적으로 대응한다.
+
+                <strong>성과</strong>
+                    행동의 영향력을 고려하여 신중하게
+                    행동함으로써, 우리를 둘러싼 공동체와
+                    신뢰를 구축한다.
+
+
+                    <strong>Originality</strong>
+                    [정의] 우리는 변화에 민첩하게 대응하고, 경계를 뛰어넘는 협업과 틀을 깨는 혁신을 통해 쉽게 모방할 수 없는 독창성을 만든다.
+
+                    <strong>출발</strong>
+                    환경변화의 속도와 방향성에 맞추어
+                    민첩하게 대응한다.
+
+                    <strong>발전</strong>
+                    다양한 분야에 적극적인 관심을 가지고
+                    더 나은 가치를 창출하기 위해 경계를
+                    뛰어넘는 협업을 추구한다.
+
+                    <strong>성과</strong>
+                    독창적인 시각과 혁신적인 활동으로
+                    쉽게 모방할 수 없는 제품과 서비스를
+                    제공한다.
+
+                 
+              </tbody>
+            </table>
+            
+            <div class="buttons">
+              <a href="/pro04/about/addValues.html" class="button is-success">등록</a>
+            </div>
+            
+        </div>
+      </section>
+      
+        
+        <style>
+        a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+        a:visited { color: #000; text-decoration:none !important}	
+    
+        a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+        </style>
+        
+    <footer class="footer">
+      <div class="content has-text-centered">
+      
+        <p> 
+    
+          <a href="https://www.lotte.co.kr/privacy/agree.do">개인정보처리방침 |</a>
+          <a href="https://www.lotte.co.kr/cscenter/qna.do">CS CENTER |</a>
+          <a href="https://www.lotte.co.kr/cmmn/siteMap.do">SITEMAP</a><br><br>
+          Copyright © 1996-2017 LOTTE. All Rights reserved.
+        </p>
+      </div>
+    </footer>
+      
+    </body>
+
+</html>
