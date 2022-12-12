@@ -37,6 +37,10 @@
     <style>
     /* header.css */
 
+    ::selection {
+		background-color: rgb(103, 83, 50);
+		color: rgb(255, 255, 255); }
+
     a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
     a:visited { color: #000; text-decoration:none !important}	
     a:hover { color: rgb(0, 0, 0); text-decoration:none !important}
@@ -46,19 +50,19 @@
     .buttons {padding-left: 650px;}
     .navbar {padding-top: 25px;}
 
-    .ft2 { clear:both; width: 100%; height: 400px; background-color: rgb(255, 255, 255); padding-bottom: 50px; }
-    .ft_wrap { clear:both; width: 1200px; margin: 0 auto; padding-top: 50px;  }
-    .ft_wrap:after { content:""; display:block; clear:both; }
+    .ft2 { clear:both; width: 100%; height: 250px; background-color: rgb(255, 255, 255); padding-bottom: 20px; }
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto;  }
+.ft_wrap:after { content:""; display:block; clear:both; }
     .ft_logo { float:left; width: 150px; }
     .left { float:left; width: 460px; padding-left: 50px; }
-    .right1 { float:left; width: 400px; padding-left: 160px; }
-    .right2 { float:left; width: 340px; padding-left: 160px; }
+    .right1 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
+    .right2 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
     .fnb { clear:both; }
     .fnb a { color:rgb(0, 0, 0); font-size:14px; padding: 24px; }
     .fnb a.dpc { color:rgb(0, 0, 0); }
     .addr { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 20px; 
     font-size:12px; line-height: 2; }
-    .copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; }
+    .copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; font-size: 13px; }
     .sel_box { float:right; border-bottom:1px solid rgb(0, 0, 0);
     height: 40px; line-height: 44px; text-align:center; width: 140px; }
     #sel { border:none; outline: none; background-color: transparent; color:rgb(0, 0, 0); }
@@ -81,14 +85,14 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
     .page { clear:both; width: 100%; min-height:100vh;}
     .page:after { content:""; display:block; clear:both; }
     .page_wrap { width: 1200px; margin: 0 auto; }
-    .content { display:none; }
+    
     .content:target { display:block; }
 
     .pic_lst { clear:both; width: 100%; }
     .pic_lst li { width: 21%; float:left; margin-right: 5%; margin-bottom: 140px;
     position:relative; }
     .pic_lst li a { display:block; position:relative; }
-    .pic_lst li a:hover {background-color: rgba(0, 0, 0, 0.089); opacity: 0.99; transition-duration:0.65s;}
+    .pic_lst li a:hover {background-color: rgb(255, 255, 255); opacity: 0.99; transition-duration:0.65s;}
     .pic_lst li a .pic_fr { width: 100%; height:250px; overflow:hidden; background-color:transparent;  }
     .pic_lst li a img { display:block; width: 250px; height:auto; }
     .pic_lst li:nth-child(4n) { margin-right: 0; }
@@ -159,7 +163,7 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
     });    
     </script>
 </head>
-<body>
+
 <div class="wrap">
     <header class="hd">
         <div id="nav-group">
@@ -318,87 +322,57 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
         </div>
     </header>
 
+<body>
+
     <div class="content" id="page1">
         <section class="page">
             <div class="page_wrap">
                 <div class="con_wrap">
-                    <ul class="pic_lst">
+                    <br><br><br><br><br>
+                    <ul class="pic_lst" style="list-style: none;">
                         <li>
-                            <a href="">
-                                <div class="pic_fr"><img src="../img/new/22fw/3db89107b003517415c1ff7986faf7f8.jpg" alt="pic1"></div>
-                                <h3 class="pic_tit">22FW CABLE TOP - BEIGE</h3>
-                                <p class="pic_info">368,000</p>
-                            </a>
+                                <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/3db89107b003517415c1ff7986faf7f8.jpg" alt="pic1"></a></div>
                         </li>
                         <li>
-                            <a href="">
-                                <div class="pic_fr"><img src="../img/new/22fw/5bfeb4fd1de7a8ce1c888a98cd5df293.jpg" alt="pic2"></div>
-                                <h3 class="pic_tit">엔젤스 온 배어 스킨 100g/250g</h3>
-                                <p class="pic_info">22,000</p>
-                            </a>
+                                <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/a8f8222a62c81459a99e8782a9a51322.jpg" alt="pic2"></a></div>
                         </li>
                         <li>
-                            <a>
-                                <div class="pic_fr"><img src="../img/new/22fw/6cdba707b7c53a080e8777c2b831003f.jpg" alt="pic10"></div>
-                                <h3 class="pic_tit">마스크 오브 매그너민티 125g/315g</h3>
-                                <p class="pic_info">22,000</p>
-                            </a>
+                                <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/5bfeb4fd1de7a8ce1c888a98cd5df293.jpg" alt="pic3"></a></div>
+
                         </li>
                         <li>
-                            <a>
-                                <div class="pic_fr"><img src="../img/new/22fw/a8f8222a62c81459a99e8782a9a51322.jpg" alt="pic10"></div>
-                                <h3 class="pic_tit">뉴</h3>
-                                <p class="pic_info">19,000</p>
-                            </a>
+                                <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/6cdba707b7c53a080e8777c2b831003f.jpg" alt="pic4"></a></div>
                         </li>
                         <li>
-                            <a>
-                                <div class="pic_fr"><img src="../img/new/22fw/cd6b13f2fd97838031b2017a310955e6.jpg" alt="pic10"></div>
-                                <h3 class="pic_tit">오렌지 330g/665g</h3>
-                                <p class="pic_info">30,000</p>
-                            </a>
+                                <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/cd6b13f2fd97838031b2017a310955e6.jpg" alt="pic5"></a></div>
                         </li>
                         <li>
-                            <a>
-                                <div class="pic_fr"><img src="./img/productpics/best/outbackmatesoap.png" alt="pic10"></div>
-                                <h3 class="pic_tit">아웃백 메이트</h3>
-                                <p class="pic_info">12,000</p>
-                            </a>
+                                <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/16c697a0069dd7cc3420ce09443569dd.jpg" alt="pic6"></a></div>
                         </li>
                         <li>
-                            <a>
-                                <div class="pic_fr"><img src="./img/productpics/best/rehabshampoo.png" alt="pic10"></div>
-                                <h3 class="pic_tit">리햅 100g/250g/500g/1000g</h3>
-                                <p class="pic_info">19,000</p>
-                            </a>
+                                <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/ad8941b8714468966618cfd23b56cd06.jpg" alt="pic7"></a></div>
                         </li>
                         <li>
-                            <a>
-                                <div class="pic_fr"><img src="./img/productpics/best/rosearganbodyconditioner.png" alt="pic10"></div>
-                                <h3 class="pic_tit">로즈 아르간 보디 컨디셔너 225g/450g</h3>
-                                <p class="pic_info">44,000</p>
-                            </a>
+                                <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/61f4240b43c91f1054caa94d99860552.jpg" alt="pic8"></a></div>
                         </li>
                         <li>
-                            <a>
-                                <div class="pic_fr"><img src="./img/productpics/best/rosejamshowergel.png" alt="pic10"></div>
-                                <div class="pic_hd"><span class="ht_ico best"></span><span class="starating"></span></div>
-                                <div id="wrapper">
-                                    <div class="vegan">vegan</div>
-                                </div>
-                                <h3 class="pic_tit">로즈 잼 100g/250g/500g/1000g</h3>
-                                <p class="pic_com">샤워젤</p>
-                                <p class="pic_info">19,000</p>
-                            </a>
+                                <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/8f65769232d7809922ce6f92b56df123.jpg" alt="pic9"></a></div>
                         </li>
+                        <li>
+                            <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/991979ce2d8497a7ffd74284addceb63.jpg" alt="pic10"></a></div>
+                    </li>
+                    <li>
+                        <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/26f3dafc58c30739978a493c31d33e31.jpg" alt="pic11"></a></div>
+                    </li>
+                <li>
+                    <div class="pic_fr"><a href="../new/22fw.html"><img src="../img/new/22fw/1c0424595c967058439549c5d876c2c2.jpg" alt="pic12"></a></div>
+            </li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
 
-
-    
     <script>
     $(document).ready(function(){
         $(".starating").click(function(){
@@ -420,13 +394,16 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
         });
     }
     </script>
-  <footer class="ft2">
+
+</body>
+
+ <footer class="ft2">
     <div class="ft_wrap">
         <div class="left">
            <p class="copyright"><br></p>
             <p class="addr">
-               LOW CLASSIC | REPRESENTATIVE 이명신
-               BUSINESS NUMBER L. 847-87-01336
+               LOW CLASSIC | REPRESENTATIVE 이명신<br>
+               BUSINESS NUMBER L. 847-87-01336<br>
                ONLINE BUSINESS L. 2019-서울강남-03844
             </p>
             <p class="copyright">© LOW CLASSIC.</p>
@@ -434,8 +411,8 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
         <div class="right1">
            <p class="copyright"></p>
            <p class="addr">
-               2F 8, DONGHO-RO 15 GIL, JUNG-GU, SEOUL, KOREA
-               T. 070-7534-5004 | INFO@LOWCLASSIC.COM  
+               2F 8, DONGHO-RO 15 GIL, JUNG-GU, SEOUL, KOREA<br>
+               T. 070-7534-5004&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;INFO@LOWCLASSIC.COM  
            </p>
        </div>
 
@@ -448,5 +425,5 @@ height: 60px; line-height: 60px; text-align: center; font-size:20px; visibility:
 </footer>
 </div>
 <a href="" class="to_top">↑</a><!-- .to_top.on -->
-</body>
+
 </html>

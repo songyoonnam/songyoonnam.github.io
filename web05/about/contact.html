@@ -38,6 +38,10 @@
    <style>
     /* header.css */
 
+    ::selection {
+		background-color: rgb(103, 83, 50);
+		color: rgb(255, 255, 255); }
+
     a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
     a:visited { color: #000; text-decoration:none !important}	
     a:hover { color: rgb(0, 0, 0); text-decoration:none !important}
@@ -181,19 +185,19 @@
     /* footer */
 
 
-.ft2 { clear:both; width: 100%; height: 400px; background-color: rgb(255, 255, 255); padding-bottom: 50px; }
-.ft_wrap { clear:both; width: 1200px; margin: 0 auto; padding-top: 50px;  }
+.ft2 { clear:both; width: 100%; height: 250px; background-color: rgb(255, 255, 255); padding-bottom: 20px; }
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto;  }
 .ft_wrap:after { content:""; display:block; clear:both; }
 .ft_logo { float:left; width: 150px; }
 .left { float:left; width: 460px; padding-left: 50px; }
-.right1 { float:left; width: 400px; padding-left: 160px; }
-.right2 { float:left; width: 340px; padding-left: 160px; }
+.right1 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
+.right2 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
 .fnb { clear:both; }
 .fnb a { color:rgb(0, 0, 0); font-size:14px; padding: 24px; }
 .fnb a.dpc { color:rgb(0, 0, 0); }
 .addr { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 20px; 
 font-size:12px; line-height: 2; }
-.copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; }
+.copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; font-size: 13px; }
 .sel_box { float:right; border-bottom:1px solid rgb(0, 0, 0);
 height: 40px; line-height: 44px; text-align:center; width: 140px; }
 #sel { border:none; outline: none; background-color: transparent; color:rgb(0, 0, 0); }
@@ -253,6 +257,11 @@ $(document).ready(function(){
 <style>
 .in_container { clear:both; width:1400px; margin:0 auto; }
 .in_container:after { content:""; display:block; clear:both; }
+
+.section {padding-top: 110px;}
+.message {width: 1000px; font-size: 12px; padding-left: 600px; padding-top: 15px;}
+.strong {font-family: georgia; font-style: italic;}
+
 </style>
 
 </head>
@@ -416,15 +425,55 @@ $(document).ready(function(){
 </header>
 
 
+
 <div class="content">
     <figure class="vs">
 <section class="page">
         <div class="con_wrap">
 
             <div class="section"><br><br>
-                <a>
-                    <img src="../img/main/main.jpg" width="1200px">
-                </a>
+
+                <article class="message is-dark">
+                    <div class="message-body">
+                        <strong><p class="strong">office</p></strong><br>
+                        2F 8, DONGHO-RO 15 GIL, JUNG-GU, SEOUL, KOREA<br>
+                        OFFICE HOUR. MON – FRI AM 10:00 - PM 6:00<br>
+                        LUNCH HOUR. PM 1:00 - PM 2:00<br><br>
+
+                        INSTAGRAM<br>
+                        @LOWCLASSIC_SEOUL<br><br>
+
+                        KAKAO PLUS FRIEND<br>
+                        @LOW CLASSIC
+                    </div>
+                  </article>
+
+                  <article class="message is-dark">
+                    <div class="message-body">
+                        <strong><p class="strong">customer service</p></strong><br>
+                        INFO@LOWCLASSIC.COM<br>
+                        +82 70 7534 5004<br>
+                        OPERATION HOUR. MON - FRI PM 2:00 - 4:00
+                    </div>
+                  </article>
+
+                  <article class="message is-dark">
+                    <div class="message-body">
+                        <strong><p class="strong">whole sale / distribution</p></strong><br>
+                        WHOLESALE@LOWCLASSIC.COM<br>
+                        +82 70 4906 8057<br>
+                        OPERATION HOUR. MON - FRI AM 10:00 - PM 6:00
+                    </div>
+                  </article>
+
+                  <article class="message is-dark">
+                    <div class="message-body">
+                        <strong><p class="strong">press</p></strong><br>
+                        INFO@LOWCLASSIC.COM<br>
+                        +82 70 7534 5004
+                    </div>
+                  </article>
+
 
             </div>
 
@@ -433,53 +482,34 @@ $(document).ready(function(){
 </figure>
 </div>
 
-<br><br>
-
-        <section class="page" id="page2">
-            <div class="page_wrap">
-                <h2 class="page_tit">new</h2> 
-                <ul class="circle_lst lst1">
-                    <li><a href=""><img src="./img/new/22fw/3db89107b003517415c1ff7986faf7f8.jpg" alt="new01" class="thumb"></a></li>
-                    <li><a href=""><img src="./img/new/22fw/5bfeb4fd1de7a8ce1c888a98cd5df293.jpg" alt="new02" class="thumb"></a></li>
-                    <li><a href=""><img src="./img/new/22fw/a8f8222a62c81459a99e8782a9a51322.jpg" alt="new04" class="thumb"></a></li>
-                    <li><a href=""><img src="./img/new/rusuho/48e73994b2fbf6663d5b32dbbf5a476f.jpg" alt="new06" class="thumb"></a></li>
-                    <li><a href=""><img src="./img/new/rusuho/60a914d1fc3b4ea712af62edce1cd49b.jpg" alt="new07" class="thumb"></a></li>
-                    <li><a href=""><img src="./img/new/rusuho/7d6a2e4aca2322d80ef292a68e48b88c.jpg" alt="new08" class="thumb"></a></li>
-                    <li><a href=""><img src="./img/new/rusuho/daff07bd6f136eb2a220da391ccfdd20.jpg" alt="new09" class="thumb"></a></li>
-                    <li><a href=""><img src="./img/new/rusuho/f35d799cc44678a08d807c087f1c0106.jpg" alt="new10" class="thumb"></a></li>
-
-                </ul>
-            </div>
-        </section>
-
  </div>
 
  <footer class="ft2">
-     <div class="ft_wrap">
-         <div class="left">
-            <p class="copyright"><br></p>
-             <p class="addr">
-                LOW CLASSIC | REPRESENTATIVE 이명신
-                BUSINESS NUMBER L. 847-87-01336
-                ONLINE BUSINESS L. 2019-서울강남-03844
-             </p>
-             <p class="copyright">© LOW CLASSIC.</p>
-         </div>
-         <div class="right1">
-            <p class="copyright"></p>
+    <div class="ft_wrap">
+        <div class="left">
+           <p class="copyright"><br></p>
             <p class="addr">
-                2F 8, DONGHO-RO 15 GIL, JUNG-GU, SEOUL, KOREA
-                T. 070-7534-5004 | INFO@LOWCLASSIC.COM  
+               LOW CLASSIC | REPRESENTATIVE 이명신<br>
+               BUSINESS NUMBER L. 847-87-01336<br>
+               ONLINE BUSINESS L. 2019-서울강남-03844
             </p>
+            <p class="copyright">© LOW CLASSIC.</p>
         </div>
+        <div class="right1">
+           <p class="copyright"></p>
+           <p class="addr">
+               2F 8, DONGHO-RO 15 GIL, JUNG-GU, SEOUL, KOREA<br>
+               T. 070-7534-5004&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;INFO@LOWCLASSIC.COM  
+           </p>
+       </div>
 
-         <script>
-         function sel_link(sel){
-             location.href = sel.value;
-         }
-         </script>
-     </div>
- </footer>
+        <script>
+        function sel_link(sel){
+            location.href = sel.value;
+        }
+        </script>
+    </div>
+</footer>
 </div> 
 <a href="" class="to_top">↑</a><!-- .to_top.on -->
 </body>

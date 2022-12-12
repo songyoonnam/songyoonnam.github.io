@@ -37,6 +37,10 @@
    <style>
     /* header.css */
 
+    ::selection {
+		background-color: rgb(103, 83, 50);
+		color: rgb(255, 255, 255); }
+
     a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
     a:visited { color: #000; text-decoration:none !important}	
     a:hover { color: rgb(0, 0, 0); text-decoration:none !important}
@@ -47,25 +51,26 @@
     .navbar {padding-top: 25px;}
     .table {font-family: georgia; font-style: italic;}
     .msg {font-size: 12px; padding-top: 8px;}
-    .input {font-size: 12px;}
+    .input {font-size: 12px; width: 300px;}
+    .form-row { width: 300px;}
     .th {width: 25px;}
+    .frm1 {padding-left: 400px;}
 
 
 
-
-    .ft2 { clear:both; width: 100%; height: 400px; background-color: rgb(255, 255, 255); padding-bottom: 50px; }
-.ft_wrap { clear:both; width: 1200px; margin: 0 auto; padding-top: 50px;  }
+    .ft2 { clear:both; width: 100%; height: 250px; background-color: rgb(255, 255, 255); padding-bottom: 20px; }
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto;  }
 .ft_wrap:after { content:""; display:block; clear:both; }
 .ft_logo { float:left; width: 150px; }
 .left { float:left; width: 460px; padding-left: 50px; }
-.right1 { float:left; width: 400px; padding-left: 160px; }
-.right2 { float:left; width: 340px; padding-left: 160px; }
+.right1 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
+.right2 { float:left; width: 700px; padding-left: 160px;  padding-top: 22px;}
 .fnb { clear:both; }
 .fnb a { color:rgb(0, 0, 0); font-size:14px; padding: 24px; }
 .fnb a.dpc { color:rgb(0, 0, 0); }
 .addr { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 20px; 
 font-size:12px; line-height: 2; }
-.copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; }
+.copyright { padding-left: 24px; color:rgb(0, 0, 0); padding-top: 10px; font-size: 13px;}
 .sel_box { float:right; border-bottom:1px solid rgb(0, 0, 0);
 height: 40px; line-height: 44px; text-align:center; width: 140px; }
 #sel { border:none; outline: none; background-color: transparent; color:rgb(0, 0, 0); }
@@ -87,7 +92,7 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
 .page { clear:both; width: 100%;}
 
 .title { padding-top:36px; padding-bottom:20px; text-align:center; font-size: 25px; font-family: georgia; font-style: italic;}
-.btn-group { padding-left:600px;}
+.btn-group { padding-left:200px;}
 #id { width:780px; float:left; margin-right:30px; margin-left:6px; }
 
 
@@ -262,21 +267,19 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
       <section class="section">
         <div class="container">
         <h2 class="title">join</h2>
-        <form name="frm1" id="frm1" action="../main.html" method="post" onsubmit="return joinCheck(this)">
+        <form name="frm1" id="frm1" class="frm1" action="../main.html" method="post" onsubmit="return joinCheck(this)">
             <table class="table">
-                <tbody>
+                <tbody class="tbody">
                     <tr>
                         <th class="th">id</th>
                         <td>
                             <div class="form-row">
-                                <input type="text" name="id" id="id" placeholder="아이디 입력" class="input is-rounded" autofocus="" required="">
-                                <input type="button" class="button is-white is-small is-rounded" value="아이디 중복 확인" onclick="idCheck()">
+                                <input type="text" name="id" id="id" placeholder="아이디 입력" class="input is-rounded" autofocus="" required=""><br><br>
+                                <input type="button" class="button is-small is-rounded" value="ID CHECK" onclick="idCheck()">
                                 <input type="hidden" name="idck" id="idck" value="no">
                             </div>
                             <div>
                                 <p class="msg" id="msg" style="padding-left:0.5rem">아이디 중복 체크를 하지 않으셨습니다</p>
-                                
-                                
                             </div>
                         </td>
                     </tr>
@@ -307,16 +310,16 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
                     <tr>
                         <th class="th">address</th>
                         <td><input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="input is-rounded" required=""><br><br>
-                        <input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input is-rounded" required=""><br><br>
+                        <input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input is-rounded" padding-top="10px" required=""><br><br>
                         <input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="input is-rounded">
-                        <button id="post_btn" onclick="findAddr()" class="button is-white is-small is-rounded">우편번호 검색</button>
+                        <button id="post_btn" onclick="findAddr()" class="button is-small is-rounded">우편번호 검색</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <div class="btn-group">
-                <input type="submit" name="submit-btn" class="button is-white is-small is-rounded" value="회원가입">
-                <input type="reset" name="reset-btn" class="button is-white is-small is-rounded" value="취소">
+                <input type="submit" name="submit-btn" class="button is-small is-rounded" value="JOIN">
+                <input type="reset" name="reset-btn" class="button is-small is-rounded" value="BACK">
             </div>
         </form>	
         <script>
@@ -324,9 +327,9 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
             $("#id").keyup(function(){
                 $("#idck").val("no");
                 if($(this).val()!=""){
-                    $("#msg").html("아이디 입력중입니다");
+                    $("#msg").html("아이디 입력 중입니다");
                 } else {
-                    $("#msg").html("아직 아이디 중복 체크를 하지 않으셨습니다");
+                    $("#msg").html("아이디 중복 여부를 확인해주세요");
                 }
             });
         });
@@ -334,7 +337,7 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
         <script>
         function idCheck(){
             if($("#id").val()==""){
-                alert("아이디를 입력하지 않으셨습니다");
+                alert("아이디를 입력해주세요");
                 $("#id").focus();
                 return;
             } 
@@ -349,25 +352,25 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
                     var idChk = result.result;	
                     if(idChk==false){	
                         $("#idck").val("no");
-                        $("#msg").html("<strong>기존에 사용되고 있는 아이디입니다 다시 입력하시기 바랍니다</strong>");
+                        $("#msg").html("<strong>사용 중인 아이디입니다</strong>");
                         $("#id").focus();
                     } else if(idChk==true){	
                         $("#idck").val("yes");
-                        $("#msg").html("<strong>사용가능한 아이디 입니다</strong>");
+                        $("#msg").html("<strong>사용 가능한 아이디입니다</strong>");
                     } else if(idck==""){
-                        $("#msg").html("<strong>아이디가 확인되지 않았습니다 다시 시도해주시기 바랍니다</strong>");
+                        $("#msg").html("<strong>아이디가 확인되지 않았습니다 다시 시도해주세요</strong>");
                     }
                 }
             });
         }
         function joinCheck(f){
             if(f.pw.value!=f.pw2.value){
-                alert("비밀번호와 비밀번호 확인이 서로 다릅니다");
+                alert("비밀번호와 비밀번호 확인이 일치하지 않습니다");
                 f.pw.focus();
                 return false;
             }
             if(f.idck.value!="yes"){
-                alert("아이디 중복 체크를 하지 않으셨습니다");
+                alert("아이디 중복 여부를 확인해주세요");
                 return false;
             }
         }
@@ -402,8 +405,8 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
         <div class="left">
            <p class="copyright"><br></p>
             <p class="addr">
-               LOW CLASSIC | REPRESENTATIVE 이명신
-               BUSINESS NUMBER L. 847-87-01336
+               LOW CLASSIC | REPRESENTATIVE 이명신<br>
+               BUSINESS NUMBER L. 847-87-01336<br>
                ONLINE BUSINESS L. 2019-서울강남-03844
             </p>
             <p class="copyright">© LOW CLASSIC.</p>
@@ -411,8 +414,8 @@ background-size:85% auto; background-repeat:no-repeat; background-position:cente
         <div class="right1">
            <p class="copyright"></p>
            <p class="addr">
-               2F 8, DONGHO-RO 15 GIL, JUNG-GU, SEOUL, KOREA
-               T. 070-7534-5004 | INFO@LOWCLASSIC.COM  
+               2F 8, DONGHO-RO 15 GIL, JUNG-GU, SEOUL, KOREA<br>
+               T. 070-7534-5004&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;INFO@LOWCLASSIC.COM  
            </p>
        </div>
 
